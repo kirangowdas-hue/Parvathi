@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Patient</title>
+</head>
+<body>
+
+<h2>Add Patient 👤</h2>
+
+<form method="POST">
+
+<input name="name" placeholder="Name" required><br><br>
+
+<input name="age" placeholder="Age" required><br><br>
+
+<select name="gender" required>
+    <option value="">Select Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+</select><br><br>
+
+<input name="phone" placeholder="Phone"><br><br>
+
+<input name="email" placeholder="Email"><br><br>
+
+<!-- ✅ SELECT DOCTOR -->
+
+<label>Doctor:</label><br> <select name="doctor" required> <option value="">Select Doctor</option> <option>Dr. Ravi (Eye Specialist)</option> <option>Dr. Meena (Skin Specialist)</option> <option>Dr. Kumar (Dentist)</option> <option>Dr. Arun (Cardiologist)</option> </select><br><br>
+
+<!-- ✅ APPOINTMENT DATE -->
+
+<input type="date" name="date" required><br><br>
+
+<button>Add Patient</button>
+
+</form>
+
+<a href="/dashboard">⬅ Back</a>
+
+</body>
+</html>

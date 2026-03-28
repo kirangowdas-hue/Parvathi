@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Bills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+</head>
+<body>
+
+<h2>Bills</h2>
+<h3>💰 Total Amount: ₹{{ total }}</h3>
+
+{% for b in bills %}
+
+<p>
+👤 {{ b[1] }}<br>
+💰 ₹{{ b[2] }}<br>
+📝 {{ b[3] }}<br>
+📅 {{ b[4] }}<br>
+
+<a href="/bill-pdf/{{ b[0] }}">
+    <button>📄 Download PDF</button>
+</a>
+
+<button onclick="window.print()">🖨 Print</button>
+
+</p>
+<hr>
+{% endfor %}
+
+<a href="/dashboard">⬅ Back</a>
+
+</body>
+</html>
+
+

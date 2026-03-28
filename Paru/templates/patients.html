@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Patients</title>
+</head>
+<body>
+
+<h2>Patients</h2>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Patients</title>
+</head>
+<body>
+
+<h2>👥 Patients List</h2>
+
+{% for p in patients %}
+
+<div style="border:1px solid gray; padding:10px; margin:10px;">
+
+```
+<b>👤 Name: {{ p[1] }} <br>
+🎂 Age: {{ p[2] }} <br>
+📞 phone: {{ p[4] }} <br>
+✉ email: {{ p[5] }} <br>
+👨‍⚕️ Doctor: {{ p[6] }}<br>
+📅 Appointment: {{ p[7] }}<br>
+
+<!-- ✅ ADD BILL BUTTON -->
+<a href="/billing/{{ p[0] }}">
+    <button>💰 Add Bill</button>
+    <button>📊 View Bills</button>
+</a>
+
+{% endfor %}
+
+<br>
+<a href="/dashboard">⬅ Back</a>
+
+</body>
+</html>
